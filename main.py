@@ -74,8 +74,6 @@ def fight():
     elif monster_health <= 0:
             print("The monster has been defeated!")
             print(f"You won with {health} health remaining and advanced through the maze!")
-    
-
 
 def battle():
     
@@ -118,7 +116,7 @@ def loot():
         print("You find a sword and now deal 50 damage")
         global damage
         damage  = 50
-         
+
 
 def exit():
     print("Come back and play some time soon!")
