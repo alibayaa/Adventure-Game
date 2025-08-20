@@ -14,8 +14,10 @@ def menu():
 
 def start_game():
     y = 0
+    print("You find yourself in a dark maze with no memory of how you got there.")
+    
     while y < 10:
-        print("You find yourself in a dark maze with no memory of how you got there.")
+       
         movement = input("Left, Right, or Forward?: ")
         if movement.lower() == "left":
             print("You moved left.")
@@ -65,13 +67,14 @@ def fight():
             time.sleep(3) 
             health -= monster_damage
             print(f"The monster dealt {monster_damage} damage. You have {health} remaining")
-    if monster_health <= 0:
-            print("The monster has been defeated!")
-            print(f"You won with {health} health remaining and advanced through the maze!")
-    elif health <= 0:
+    if health <= 0:
             print("You have been defeated.")
             print("Game Over")
             sys.exit()
+    elif monster_health <= 0:
+            print("The monster has been defeated!")
+            print(f"You won with {health} health remaining and advanced through the maze!")
+    
 
 
 def battle():
